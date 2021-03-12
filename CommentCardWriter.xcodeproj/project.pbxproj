@@ -13,6 +13,7 @@
 		3870873C25FB904D007ADB71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3870873B25FB904D007ADB71 /* Preview Assets.xcassets */; };
 		3870874725FB904E007ADB71 /* CommentCardWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870874625FB904E007ADB71 /* CommentCardWriterTests.swift */; };
 		3870875225FB904E007ADB71 /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870875125FB904E007ADB71 /* CommentCardWriterUITests.swift */; };
+		3870876625FB90E0007ADB71 /* InputGatherer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870876525FB90E0007ADB71 /* InputGatherer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		3870874D25FB904E007ADB71 /* CommentCardWriterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentCardWriterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3870875125FB904E007ADB71 /* CommentCardWriterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITests.swift; sourceTree = "<group>"; };
 		3870875325FB904E007ADB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3870876525FB90E0007ADB71 /* InputGatherer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputGatherer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +97,9 @@
 		3870873325FB904C007ADB71 /* CommentCardWriter */ = {
 			isa = PBXGroup;
 			children = (
+				3870876325FB909F007ADB71 /* Model */,
+				3870876225FB9091007ADB71 /* View */,
 				3870873425FB904C007ADB71 /* CommentCardWriterApp.swift */,
-				3870873625FB904C007ADB71 /* ContentView.swift */,
 				3870873825FB904D007ADB71 /* Assets.xcassets */,
 				3870873D25FB904D007ADB71 /* Info.plist */,
 				3870873A25FB904D007ADB71 /* Preview Content */,
@@ -128,6 +131,22 @@
 				3870875325FB904E007ADB71 /* Info.plist */,
 			);
 			path = CommentCardWriterUITests;
+			sourceTree = "<group>";
+		};
+		3870876225FB9091007ADB71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3870873625FB904C007ADB71 /* ContentView.swift */,
+				3870876525FB90E0007ADB71 /* InputGatherer.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3870876325FB909F007ADB71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +280,7 @@
 			files = (
 				3870873725FB904C007ADB71 /* ContentView.swift in Sources */,
 				3870873525FB904C007ADB71 /* CommentCardWriterApp.swift in Sources */,
+				3870876625FB90E0007ADB71 /* InputGatherer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
