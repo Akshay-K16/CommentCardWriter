@@ -46,7 +46,9 @@ struct InputGatherer: View {
                 }
             }.pickerStyle(SegmentedPickerStyle())
             Button("Generate Comment") {
-                print("TODO")
+                let commentGenerator = Comment(subject: selectedSubject, enjoyment: enjoyment == "Yes" ? true : false, pace: pace, progress: progress == "Yes" ? true : false)
+                
+                print(commentGenerator.generateComment())
             }
         }
 
