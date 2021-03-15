@@ -36,9 +36,9 @@ class Comment {
             comment += "and I think the pace is \(pace.lowercased())."
         }
         if progress {
-            comment += "I am satisfied with my progress this half."
+            comment += " I am satisfied with my progress this half."
         } else {
-            comment += "I am not satisfied with my progress this half."
+            comment += " I am not satisfied with my progress this half."
         }
         
         return comment

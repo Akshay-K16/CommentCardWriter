@@ -17,41 +17,40 @@ struct InputGatherer: View {
     @State private var progress = "No"
     
     var body: some View {
-        Form{
-            Text("Comment Generator")
-                .bold()
-                .font(.title)
-            Text("1. Select Subject")
-            Picker("", selection: $selectedSubject ){
-                ForEach(subjects, id: \.self) {
-                    Text($0)
-                }
-            }.pickerStyle(WheelPickerStyle())
-            Text("2. Have you enjoyed \(selectedSubject) so far this half?")
-            Picker("", selection: $enjoyment){
-                ForEach(choices1, id: \.self) {
-                    Text($0)
-                }
-            }.pickerStyle(SegmentedPickerStyle())
-            Text("3. Do you think the pace of the lessons is...")
-            Picker("", selection: $pace){
-                ForEach(choices2, id: \.self) {
-                    Text($0)
-                }
-            }.pickerStyle(SegmentedPickerStyle())
-            Text("4. Are you satisfied with your progress this half?")
-            Picker("", selection: $progress){
-                ForEach(choices1, id: \.self) {
-                    Text($0)
-                }
-            }.pickerStyle(SegmentedPickerStyle())
-            Button("Generate Comment") {
-                let commentGenerator = Comment(subject: selectedSubject, enjoyment: enjoyment == "Yes" ? true : false, pace: pace, progress: progress == "Yes" ? true : false)
-                
-                print(commentGenerator.generateComment())
+        NavigationView {
+            Form {
+                Text("1. Select Subject")
+                Picker("", selection: $selectedSubject ){
+                    ForEach(subjects, id: \.self) {
+                        Text($0)
+                    }
+                }.pickerStyle(WheelPickerStyle())
+                Text("2. Have you enjoyed \(selectedSubject) so far this half?")
+                Picker("", selection: $enjoyment){
+                    ForEach(choices1, id: \.self) {
+                        Text($0)
+                    }
+                }.pickerStyle(SegmentedPickerStyle())
+                Text("3. Do you think the pace of the lessons is...")
+                Picker("", selection: $pace){
+                    ForEach(choices2, id: \.self) {
+                        Text($0)
+                    }
+                }.pickerStyle(SegmentedPickerStyle())
+                Text("4. Are you satisfied with your progress this half?")
+                Picker("", selection: $progress){
+                    ForEach(choices1, id: \.self) {
+                        Text($0)
+                    }
+                }.pickerStyle(SegmentedPickerStyle())
+                NavigationLink(
+                    destination: CommentView(commentGenerator: Comment(subject: selectedSubject, enjoyment: enjoyment == "Yes" ? true : false, pace: pace, progress: progress == "Yes" ? true : false)),
+                    label: {
+                        Text("Generate Comment")
+                    })
             }
+            .navigationBarTitle("Generate Comment")
         }
-
     }
 }
 
