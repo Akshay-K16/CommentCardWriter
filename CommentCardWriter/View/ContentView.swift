@@ -9,8 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            Form {
+                NavigationLink(
+                    destination: InputGatherer(subjects: ["Maths", "Computer Science", "Economics"]),
+                    label: {
+                        Text("Generate a New Comment")
+                })
+                NavigationLink(
+                    destination: SavedComments(comments: FileHandler.load()),
+                    label: {
+                        Text("Saved Comments")
+                })
+            }.navigationBarTitle("Comment Generator")
+        }
     }
 }
 

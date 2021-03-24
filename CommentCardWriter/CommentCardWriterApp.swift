@@ -11,7 +11,8 @@ import SwiftUI
 struct CommentCardWriterApp: App {
     var body: some Scene {
         WindowGroup {
-            InputGatherer(subjects: ["Maths", "Computer Science", "Economics"])
+            //InputGatherer(subjects: ["Maths", "Computer Science", "Economics"])
+            ContentView()
         }
     }
 }

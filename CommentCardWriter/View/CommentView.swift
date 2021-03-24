@@ -8,18 +8,36 @@
 import SwiftUI
 
 struct CommentView: View {
-    var commentGenerator: Comment
-    //@State private var comment = commentGenerator.generateComment()
+    @ObservedObject var commentGenerator: Comment
     
     var body: some View {
         VStack {
-            Text(commentGenerator.generateComment())
+            Text(commentGenerator.comment)
                 .padding(50)
-            //TextField("Comment", text: $comment)
             Button("Copy To Clipboard") {
                 let pasteboard = UIPasteboard.general
-                pasteboard.string = commentGenerator.generateComment()
+                pasteboard.string = commentGenerator.comment
             }
+            .foregroundColor(.white)
+            .padding()
+            .background(Color.accentColor)
+            .cornerRadius(8)
+            NavigationLink(
+                destination: EditComment(commentGenerator: commentGenerator),
+                label: {
+                    Text("Edit Comment")
+            })
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.accentColor)
+                .cornerRadius(8)
+            Button("Save") {
+                FileHandler.save(commentGenerator.comment)
+            }
+            .foregroundColor(.white)
+            .padding()
+            .background(Color.accentColor)
+            .cornerRadius(8)
         }.navigationBarTitle("Generated Comment:")
     }
 }

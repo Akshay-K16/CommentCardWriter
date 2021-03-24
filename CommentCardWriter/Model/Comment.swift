@@ -7,17 +7,19 @@
 
 import Foundation
 
-class Comment {
+class Comment: ObservableObject {
     var subject: String
     var enjoyment: Bool
     var pace: String
     var progress: Bool
+    @Published var comment = ""
     
     init(subject: String, enjoyment: Bool, pace: String, progress: Bool) {
         self.subject = subject
         self.enjoyment = enjoyment
         self.pace = pace
         self.progress = progress
+        self.comment = self.generateComment()
     }
     
     func generateComment() -> String {

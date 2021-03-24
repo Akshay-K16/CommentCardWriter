@@ -15,6 +15,10 @@
 		3870874725FB904E007ADB71 /* CommentCardWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870874625FB904E007ADB71 /* CommentCardWriterTests.swift */; };
 		3870875225FB904E007ADB71 /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870875125FB904E007ADB71 /* CommentCardWriterUITests.swift */; };
 		3870876625FB90E0007ADB71 /* InputGatherer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870876525FB90E0007ADB71 /* InputGatherer.swift */; };
+		38947CFA2608F128008D110F /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38947CF92608F128008D110F /* FileManager.swift */; };
+		38947D102608F309008D110F /* SavedComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38947D0F2608F309008D110F /* SavedComments.swift */; };
+		38B4FB6B2600AEA400F61313 /* EditComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4FB6A2600AEA400F61313 /* EditComment.swift */; };
+		38BD688A2609E60F0074BD28 /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD68892609E60F0074BD28 /* FileHandler.swift */; };
 		38DF916225FFB31B008718AD /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF916125FFB31B008718AD /* CommentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +54,10 @@
 		3870875125FB904E007ADB71 /* CommentCardWriterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITests.swift; sourceTree = "<group>"; };
 		3870875325FB904E007ADB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3870876525FB90E0007ADB71 /* InputGatherer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputGatherer.swift; sourceTree = "<group>"; };
+		38947CF92608F128008D110F /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		38947D0F2608F309008D110F /* SavedComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedComments.swift; sourceTree = "<group>"; };
+		38B4FB6A2600AEA400F61313 /* EditComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditComment.swift; sourceTree = "<group>"; };
+		38BD68892609E60F0074BD28 /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
 		38DF916125FFB31B008718AD /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +109,7 @@
 		3870873325FB904C007ADB71 /* CommentCardWriter */ = {
 			isa = PBXGroup;
 			children = (
+				38947CF82608F118008D110F /* Extensions */,
 				3870876325FB909F007ADB71 /* Model */,
 				3870876225FB9091007ADB71 /* View */,
 				3870873425FB904C007ADB71 /* CommentCardWriterApp.swift */,
@@ -143,6 +152,8 @@
 				3870873625FB904C007ADB71 /* ContentView.swift */,
 				3870876525FB90E0007ADB71 /* InputGatherer.swift */,
 				38DF916125FFB31B008718AD /* CommentView.swift */,
+				38B4FB6A2600AEA400F61313 /* EditComment.swift */,
+				38947D0F2608F309008D110F /* SavedComments.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,9 +161,18 @@
 		3870876325FB909F007ADB71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				38BD68892609E60F0074BD28 /* FileHandler.swift */,
 				385B487325FBE7FE009E6BB3 /* Comment.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		38947CF82608F118008D110F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				38947CF92608F128008D110F /* FileManager.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,8 +307,12 @@
 				3870873725FB904C007ADB71 /* ContentView.swift in Sources */,
 				3870873525FB904C007ADB71 /* CommentCardWriterApp.swift in Sources */,
 				3870876625FB90E0007ADB71 /* InputGatherer.swift in Sources */,
+				38BD688A2609E60F0074BD28 /* FileHandler.swift in Sources */,
+				38947CFA2608F128008D110F /* FileManager.swift in Sources */,
+				38B4FB6B2600AEA400F61313 /* EditComment.swift in Sources */,
 				38DF916225FFB31B008718AD /* CommentView.swift in Sources */,
 				385B487425FBE7FE009E6BB3 /* Comment.swift in Sources */,
+				38947D102608F309008D110F /* SavedComments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
